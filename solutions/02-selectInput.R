@@ -1,9 +1,6 @@
-# Use Cmd + / to toggle comments
+# 2. Add selectInput code to the sidebar
 
-# Loads datasets and tools
-library(tidyverse)
-georgia_mortality <- read.csv("data/georgia_mortality.csv")
-georgia_population <- read.csv("data/georgia_population.csv")
+# Use Cmd + / to toggle comments
 
 # # A map of the data
 # library(leaflet)
@@ -14,9 +11,6 @@ georgia_population <- read.csv("data/georgia_population.csv")
 # library(DT)
 # datatable(filter(georgia_mortality, Site == "Thyroid"))
 
-# # A drop down menu that displays each type of cancer in georgia_mortality
-# selectInput("site", "Cancer type:", sort(unique(georgia_mortality$Site)))
-
 # # Querychat components
 # library(querychat)
 # qc <- QueryChat$new(georgia_mortality, greeting = "How can I help you explore cancer mortality in Georgia?")
@@ -24,12 +18,15 @@ georgia_population <- read.csv("data/georgia_population.csv")
 # qc_vals <- qc$server()
 # qc_vals$df()
 
-# A shiny app
 library(shiny)
 library(bslib)
+library(tidyverse)
+
+georgia_mortality <- read.csv("data/georgia_mortality.csv")
+georgia_population <- read.csv("data/georgia_population.csv")
 
 ui <- page_sidebar(
-  sidebar = sidebar(),
+  sidebar = sidebar(selectInput("site", "Cancer type:", sort(unique(georgia_mortality$Site))))
 )
 
 server <- function(input, output) {
