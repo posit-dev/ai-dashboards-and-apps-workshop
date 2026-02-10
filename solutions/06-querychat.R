@@ -1,4 +1,4 @@
-# 5. Sey up querychat in the sidebar
+# 6. Enable querychat
 
 # Use Cmd + / to toggle comments
 
