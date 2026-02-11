@@ -1,10 +1,5 @@
 # 6. Enable querychat
 
-# Use Cmd + / to toggle comments
-
-# # Querychat components
-# qc_vals$df()
-
 library(shiny)
 library(bslib)
 library(tidyverse)
