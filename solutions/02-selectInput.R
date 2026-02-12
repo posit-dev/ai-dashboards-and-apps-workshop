@@ -1,15 +1,21 @@
 # 2. Add selectInput code to the sidebar
 
-# Use Cmd + / to toggle comments
+# Use Cmd + / to toggle comments (Ctrl + / on Windows)
 
 # # A map of the data
 # library(leaflet)
 # source("create_mortality_map.R") # defines create_mortality_map() function
-# create_mortality_map(filter(georgia_mortality, Site == "Thyroid"), georgia_population)
+# leafletOutput("map", height = "500px")
+# output$map <- renderLeaflet({
+#   create_mortality_map(filter(georgia_mortality, Site == "Thyroid"), georgia_population)
+# })
 
 # # A filtered table of the data
 # library(DT)
-# datatable(filter(georgia_mortality, Site == "Thyroid"))
+# DTOutput("_____")
+# output$table <- _______DT({
+#   datatable(filter(georgia_mortality, Site == "Thyroid"))
+# })
 
 # # Querychat components
 # library(querychat)

@@ -1,6 +1,6 @@
 # 4. Add a datatable to the app
 
-# Use Cmd + / to toggle comments
+# Use Cmd + / to toggle comments (Ctrl + / on Windows)
 
 # # Querychat components
 # library(querychat)

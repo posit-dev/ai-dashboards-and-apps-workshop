@@ -1,10 +1,13 @@
 # 3. Add a leaflet plot to the app
 
-# Use Cmd + / to toggle comments
+# Use Cmd + / to toggle comments (Ctrl + / on Windows)
 
 # # A filtered table of the data
 # library(DT)
-# datatable(filter(georgia_mortality, Site == "Thyroid"))
+# DTOutput("_____")
+# output$table <- _______DT({
+#   datatable(filter(georgia_mortality, Site == "Thyroid"))
+# })
 
 # # Querychat components
 # library(querychat)

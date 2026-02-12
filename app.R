@@ -1,4 +1,4 @@
-# Use Cmd + / to toggle comments
+# Use Cmd + / to toggle comments (Ctrl + / on Windows)
 
 # Loads datasets and tools
 library(tidyverse)
@@ -8,11 +8,17 @@ georgia_population <- read.csv("data/georgia_population.csv")
 # # A map of the data
 # library(leaflet)
 # source("create_mortality_map.R") # defines create_mortality_map() function
-# create_mortality_map(filter(georgia_mortality, Site == "Thyroid"), georgia_population)
+# leafletOutput("map", height = "500px")
+# output$map <- renderLeaflet({
+#   create_mortality_map(filter(georgia_mortality, Site == "Thyroid"), georgia_population)
+# })
 
 # # A filtered table of the data
 # library(DT)
-# datatable(filter(georgia_mortality, Site == "Thyroid"))
+# DTOutput("_____")
+# output$table <- _______DT({
+#   datatable(filter(georgia_mortality, Site == "Thyroid"))
+# })
 
 # # A drop down menu that displays each type of cancer in georgia_mortality
 # selectInput("site", "Cancer type:", sort(unique(georgia_mortality$Site)))
