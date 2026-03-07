@@ -16,8 +16,8 @@ library(leaflet)
 library(DT)
 
 source("create_mortality_map.R")
-georgia_mortality <- read.csv("data/georgia_mortality.csv")
-georgia_population <- read.csv("data/georgia_population.csv")
+georgia_mortality <- read.csv("georgia_mortality.csv")
+georgia_population <- read.csv("georgia_population.csv")
 
 ui <- page_sidebar(
   sidebar = sidebar(selectInput("site", "Cancer type:", sort(unique(georgia_mortality$Site)))),

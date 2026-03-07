@@ -8,8 +8,8 @@ library(DT)
 library(querychat)
 
 source("create_mortality_map.R")
-georgia_mortality <- read.csv("data/georgia_mortality.csv")
-georgia_population <- read.csv("data/georgia_population.csv")
+georgia_mortality <- read.csv("georgia_mortality.csv")
+georgia_population <- read.csv("georgia_population.csv")
 
 qc <- QueryChat$new(georgia_mortality, greeting = "How can I help you explore cancer mortality in Georgia?")
 
