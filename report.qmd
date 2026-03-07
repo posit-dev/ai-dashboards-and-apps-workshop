@@ -23,11 +23,9 @@ library(leaflet)
 library(DT)
 
 # Load datasets
-georgia_mortality <- read.csv("data/georgia_mortality.csv")
-georgia_population <- read.csv("data/georgia_population.csv")
+georgia_mortality <- read.csv("georgia_mortality.csv")
+georgia_population <- read.csv("georgia_population.csv")
 
-# Load mapping function
-source("create_mortality_map.R")
 ```
 
 ## Geographic Distribution
@@ -37,6 +35,9 @@ The map below shows lung cancer mortality rates per 100,000 population across Ge
 ```{r}
 #| label: map
 #| fig-height: 6
+
+# Load mapping function
+source("create_mortality_map.R")
 
 create_mortality_map(filter(georgia_mortality, Site == "Lung & Bronchus"), georgia_population)
 ```
@@ -62,9 +63,12 @@ The table below provides the complete lung cancer mortality dataset, which can b
 ```{r}
 #| label: data-table
 
-datatable(
-  filter(georgia_mortality, Site == "Lung & Bronchus")
-)
+georgia_mortality |>
+  filter(Site == "Lung & Bronchus") |>
+  DT::datatable(
+    rownames = FALSE,
+    options = list(pageLength = 15, scrollX = TRUE)
+  )
 ```
 
 ---
