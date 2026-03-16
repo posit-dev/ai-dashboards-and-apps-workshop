@@ -2,10 +2,10 @@
 
 This short workshop will show you how to build and share:
 
-- Reports with Quarto
-- Dashboards with Quarto
-- Interactive apps with Quarto and Shiny
-- AI powered apps with QueryChat
+- [Reports with Quarto](https://quarto.org/)
+- [Dashboards with Quarto](https://quarto.org/docs/dashboards/)
+- [Interactive apps with Shiny](https://shiny.posit.co/)
+- [AI powered apps with QueryChat](https://posit-dev.github.io/querychat/r/articles/build.html)
 
 We will learn how to share these on Posit Connect, where you can control access to your content, schedule automatic updates, monitor usage, and more.
 
